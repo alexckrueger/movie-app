@@ -6,5 +6,8 @@ class ActorsController < ApplicationController
     render json: actor
   end
 
+  def all_actors
+    render json: Actor.all
+  end
 
 end
