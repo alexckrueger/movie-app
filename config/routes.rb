@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get "/all_actors" => "actors#all_actors"
 
+  get "/movies" => "movies#index"
+
 end
