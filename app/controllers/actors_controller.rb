@@ -1,13 +1,13 @@
 class ActorsController < ApplicationController
 
-  def find_actor
-    id = params[:id]
-    actor = Actor.find_by(id: id)
-    render json: actor
+  def index
+    render json: Actor.all
   end
 
-  def all_actors
-    render json: Actor.all
+  def show
+    id = params[:id]
+    actor = Actor.find(id)
+    render json: actor
   end
 
 end

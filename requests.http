@@ -1,0 +1,23 @@
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "id": 34
+}
+
+###
+
+GET http://localhost:3000/actors/30
+
+###
+
+GET http://localhost:3000/actorsquery?id=30
+
+###
+
+POST http://localhost:3000/actors
+Content-Type: application/json
+
+{
+  "id": 25
+}
