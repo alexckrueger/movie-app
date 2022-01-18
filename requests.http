@@ -1,9 +1,39 @@
+GET http://localhost:3000/movies
+
+### SEE MOVIES
+
+GET http://localhost:3000/movies/30
+
+### CREATE
+
 POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "id": 34
+  "title": "BATMAN",
+  "year": 2050,
+  "plot": "I am batmannnnnnnnnn"
 }
+
+### UPDATE
+
+PATCH http://localhost:3000/movies/30
+Content-Type: application/json
+
+{
+  "year": 1980
+}
+
+### DELETE
+
+DELETE http://localhost:3000/movies/3
+
+
+
+
+### ACTORS BELOW
+
+GET http://localhost:3000/actors
 
 ###
 
@@ -11,13 +41,24 @@ GET http://localhost:3000/actors/30
 
 ###
 
-GET http://localhost:3000/actorsquery?id=30
-
-###
-
 POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "id": 25
+  "first_name": "Red",
+  "last_name": "Rover",
+  "known_for": "Send em over!"
 }
+
+###
+
+PATCH http://localhost:3000/actors/30
+Content-Type: application/json
+
+{
+  "first_name": "Tangela"
+}
+
+###
+
+DELETE http://localhost:3000/actors/29
