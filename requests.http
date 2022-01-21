@@ -10,8 +10,8 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "title": "BATMAN",
-  "year": 2050,
+  "title": "B",
+  "year": 1558,
   "plot": "I am batmannnnnnnnnn"
 }
 
@@ -21,7 +21,7 @@ PATCH http://localhost:3000/movies/30
 Content-Type: application/json
 
 {
-  "year": 1980
+  "year": 1800
 }
 
 ### DELETE
@@ -45,18 +45,20 @@ POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Red",
+  "first_name": "R",
   "last_name": "Rover",
-  "known_for": "Send em over!"
+  "known_for": "Send em over!",
+  "age": 13
 }
 
 ###
 
-PATCH http://localhost:3000/actors/30
+PATCH http://localhost:3000/actors/38
 Content-Type: application/json
 
 {
-  "first_name": "Tangela"
+  "first_name": "Tara",
+  "last_name": "Y"
 }
 
 ###
