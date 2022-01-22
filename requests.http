@@ -10,18 +10,16 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "title": "B",
-  "year": 1558,
-  "plot": "I am batmannnnnnnnnn"
+  "english": true
 }
 
 ### UPDATE
 
-PATCH http://localhost:3000/movies/30
+PATCH http://localhost:3000/movies/11
 Content-Type: application/json
 
 {
-  "year": 1800
+  "english": true
 }
 
 ### DELETE
