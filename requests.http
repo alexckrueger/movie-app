@@ -1,3 +1,7 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDM0Mjg4OTZ9.i7vHx13A73AJJIeClL-mqPkm0nb-S-hsBSoFlsjRxg0
+
+###
+
 GET http://localhost:3000/movies
 
 ### SEE MOVIES
@@ -41,24 +45,47 @@ GET http://localhost:3000/actors/18
 
 POST http://localhost:3000/actors
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
 
 {
-  "first_name": "R",
-  "last_name": "Rover",
-  "known_for": "Send em over!",
-  "age": 13
+  "first_name": "Yellow",
+  "last_name": "Brick Road",
+  "known_for": "ayooooooooo",
+  "age": 50,
+  "movie_id": 14
 }
 
 ###
 
-PATCH http://localhost:3000/actors/38
+PATCH http://localhost:3000/actors/34
 Content-Type: application/json
+Authorization: Bearer {{ jwt }}
 
 {
-  "first_name": "Tara",
-  "last_name": "Y"
+  "gender": "male"
 }
 
 ###
 
 DELETE http://localhost:3000/actors/29
+
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Lechuga",
+  "email": "lechuga@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "bear@test.com",
+  "password": "password"
+}

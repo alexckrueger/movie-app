@@ -1,5 +1,6 @@
 class ActorsController < ApplicationController
-  
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     actors = Actor.all.order("age desc")
     render json: actors
