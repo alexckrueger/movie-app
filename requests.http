@@ -1,8 +1,9 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDM0Mjg4OTZ9.i7vHx13A73AJJIeClL-mqPkm0nb-S-hsBSoFlsjRxg0
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDM1OTc1NjZ9.pZgzee_7SZjUy0mMnYyET30ocI9U5d77zmwfmNABO1M
 
 ###
 
 GET http://localhost:3000/movies
+Authorization: Bearer {{ jwt }}
 
 ### SEE MOVIES
 
