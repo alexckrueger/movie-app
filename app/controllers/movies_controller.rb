@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     if movie.save
       render json: movie
     else
-      render json: {errors: movie.errors.full_messages}
+      render json: {errors: movie.errors.full_messages}, status: 422
     end
   end
 
@@ -28,15 +28,15 @@ class MoviesController < ApplicationController
 
   def update
     movie = Movie.find(params[:id])
-    movie.title = params[:title] || movie.title,
-    movie.year =  params[:year] || movie.year,
+    movie.title = params[:title] || movie.title
+    movie.year =  params[:year] || movie.year
     movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
     if movie.save
       render json: movie
     else
-      render json: movie.errors.full_messages
+      render json: movie.errors.full_messages, status: 422
     end
   end
 
